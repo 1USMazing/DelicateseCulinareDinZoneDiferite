@@ -1,0 +1,195 @@
+*{
+    
+    padding: 0;
+    list-style-type: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    
+}
+
+body
+{
+    background: url("F:/Cursuri/Tehnici_Web/PROIECT/Resurse/Imagini/Background.jpg");
+    background-size: 1500px 750px;
+}
+
+a
+{
+    display: block;
+    padding:10px 0;
+    color:white;
+    text-decoration: none;
+}
+
+.Menu
+{
+    display: flex;
+    margin-top: 20px;
+    margin: 0;
+    
+}
+
+.Menu>li
+{
+    flex: 1;
+    text-align: center;
+    
+}
+
+.Menu>li>a
+{
+    background: linear-gradient(to bottom, #008000, #000);
+}
+
+.Menu>.SubMenu0>a
+{
+    background: linear-gradient(to bottom, #ff0000, #000);
+}
+
+.Menu>.SubMenu>a
+{
+    background: linear-gradient(to bottom, #ff0000, #000);
+}
+
+.SubMenuLayout>li>a
+{
+    background: linear-gradient(to bottom, #00a54a, #000);
+}
+
+.SubSubMenu-1-Layout>li>a
+{
+    background: linear-gradient(to bottom, #5800bd, #000);
+}
+
+.SubSubMenu-2-Layout>li>a
+{
+    background: linear-gradient(to bottom, #5800bd, #000);
+}
+
+.Menu>li:not(:first-child)
+{
+    margin-left: 1px;
+    
+}
+
+.SubMenuLayout>li
+{
+    margin-top: 1px;
+    
+}
+
+.SubSubMenu-1, .SubSubMenu-2
+{
+    position:relative;
+}
+
+.SubSubMenu-1-Layout, .SubSubMenu-2-Layout
+{
+    position:absolute;
+    width: 100%;
+    left: 100%;
+    top:0;
+}
+
+.SubSubMenu-1-Layout>li:not(:first-child)
+{
+    margin-top: 1px;
+}
+
+.SubSubMenu-2-Layout>li:not(:first-child)
+{
+    margin-top: 1px;
+}
+
+.SubSubMenu-1-Layout, .SubSubMenu-2-Layout
+{
+    margin-left: 1px;
+}
+
+.SubMenu>a:after, .SubSubMenu-1>a:after, .SubSubMenu-2>a:after
+{
+    content:"";
+    width: 10px;
+    height:10px;
+    display:inline-block;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    margin-left:10px;
+    transform: rotate(45deg);
+    position: relative;
+    transition: 1s transform ease;
+
+}
+
+.SubSubMenu-1>a:after, .SubSubMenu-2>a:after
+{
+    transform: rotate(315deg);
+}
+
+li>a:hover
+{
+    font-size: 21px;
+}
+
+.SubSubMenu-1-Layout, .SubSubMenu-2-Layout, .SubMenuLayout
+{
+    display: none;
+}
+
+.SubMenu:hover .SubMenuLayout, .SubSubMenu-1:hover .SubSubMenu-1-Layout, .SubSubMenu-2:hover .SubSubMenu-2-Layout 
+{
+    display: block;
+}
+
+.SubMenu:hover>a:after
+{
+    transform: rotate(-135deg);
+    top:3px;
+}
+
+.SubSubMenu-1:hover>a:after
+{
+    transform: rotate(225deg);
+}
+
+.SubSubMenu-2:hover>a:after
+{
+    transform: rotate(225deg);
+}
+
+@media screen and (max-width:500 px)
+{
+    .Menu
+    {
+        flex-direction:column;
+    }
+    .SubMenu, .SubSubMenu-1-Layout, .SubSubMenu-2-Layout
+    {
+        position:static;
+    }
+    .Menu>li:not(:first-child)
+    {
+        margin-left:0;
+        margin-top:1px;
+    }
+    .SubMenuLayout li:nth-child(n)
+    {
+        margin:1px 0 0 0;
+    }
+    .SubMenuLayout, .SubSubMenu-1-Layout, .SubSubMenu-2-Layout
+    {
+        display:block;
+        margin:0;
+        max-height: 0;
+        overflow: hidden;
+        transition: 6s all ease;
+    }
+    .SubMenu:hover .SubMenuLayout,
+    .SubSubMenu-1:hover .SubSubMenu-1-Layout,
+    .SubSubMenu-2:hover .SubSubMenu-2-Layout
+    {
+        max-height: 280px;
+    }
+
+
+}
