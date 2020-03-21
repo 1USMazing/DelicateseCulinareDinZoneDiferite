@@ -41,14 +41,20 @@ a
     background: linear-gradient(to bottom, #008000, #000);
 }
 
-.Menu>.SubMenu0>a
+.Menu>li>a:hover
 {
-    background: linear-gradient(to bottom, #ff0000, #000);
+    background: linear-gradient(to top, #008000, #000)
 }
+
 
 .Menu>.SubMenu>a
 {
     background: linear-gradient(to bottom, #ff0000, #000);
+}
+
+.Menu>.SubMenu>a:hover
+{
+    background: linear-gradient(to top, #ff0000, #000);
 }
 
 .SubMenuLayout>li>a
@@ -56,14 +62,19 @@ a
     background: linear-gradient(to bottom, #00a54a, #000);
 }
 
-.SubSubMenu-1-Layout>li>a
+.SubMenuLayout>li>a:hover
+{
+    background: linear-gradient(to top, #00a54a, #000);
+}
+
+.SubSubMenu-1-Layout>li>a,.SubSubMenu-2-Layout>li>a
 {
     background: linear-gradient(to bottom, #5800bd, #000);
 }
 
-.SubSubMenu-2-Layout>li>a
+.SubSubMenu-1-Layout>li>a:hover,.SubSubMenu-2-Layout>li>a:hover
 {
-    background: linear-gradient(to bottom, #5800bd, #000);
+    background: linear-gradient(to top, #5800bd, #000);
 }
 
 .Menu>li:not(:first-child)
