@@ -10,7 +10,7 @@
 body
 {
     background:#ffffff;
-    background: url("F:/Cursuri/Tehnici_Web/PROIECT/Resurse/Imagini/Background.jpg");
+    background-image: url("F:/Cursuri/Tehnici_Web/PROIECT/Resurse/Imagini/Background.jpg");
     background-size: 1660px 750px;
 }
 
