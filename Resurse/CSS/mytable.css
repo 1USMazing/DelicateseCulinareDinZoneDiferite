@@ -16,4 +16,9 @@ border-collapse:collapse;
 empty-cells: show;
 }
 
+table a[href]
+{
+    color:rgb(0, 17, 255);
+    font-weight: bold;
+}
        
