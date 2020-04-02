@@ -1,4 +1,3 @@
-
 th,td
     {
     border: 3px solid black;
@@ -14,6 +13,27 @@ table
 {
 border-collapse:collapse;
 empty-cells: show;
+margin-top: 10px;
+width: 100%;
+table-layout: fixed;
+}
+
+.td, .th
+{
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+td
+{
+    overflow: hidden;
+}
+
+td a
+{
+    display: block;
+    margin: -10em;
+    padding: 10em;
 }
 
 table a[href]
@@ -21,4 +41,11 @@ table a[href]
     color:rgb(0, 17, 255);
     font-weight: bold;
 }
-       
+
+@media screen and (min-width:480px) and (max-width:700px)
+{
+    table, thead, tbody, tr, th, td
+    {
+        display: block;
+    }
+}
