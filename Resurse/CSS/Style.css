@@ -22,12 +22,14 @@ main ul li
 {
     margin-left: 15px;
     list-style-type: square;
-}
+} 
 
 body
 {
-    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255,255,255,0.25)), url('https://lh3.googleusercontent.com/proxy/GUxwQ50KM49ZPQgFlScpnZyy_OwmXY29k4DKUi8Egn7SbgUPExdqfa_hVvMhOKZhmz4LEBsj--0rKYZdaoJKvU2vVx8SA4RlDCpWjssHY8aEGF96FBTlX88CllZUs8TUZT9E7in5sA');
-    background-size: 1660px 750px;
+    /*background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255,255,255,0.25)), url('https://lh3.googleusercontent.com/proxy/GUxwQ50KM49ZPQgFlScpnZyy_OwmXY29k4DKUi8Egn7SbgUPExdqfa_hVvMhOKZhmz4LEBsj--0rKYZdaoJKvU2vVx8SA4RlDCpWjssHY8aEGF96FBTlX88CllZUs8TUZT9E7in5sA');
+    */
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255,255,255,0.25)), url('https://c1.wallpaperflare.com/preview/312/229/301/food-knife-background-wooden.jpg');
+    background-size: 1660px 1000px;
 }
 
 a
@@ -235,7 +237,7 @@ li>a:hover
         overflow: hidden;
         max-width: 100%;
         height: auto;
-    };
+    }
 
 }
 /*   */
