@@ -1,0 +1,16 @@
+{"lastId":5,"bucatari":
+    [{"id":0,"nume":"Antold Raul", "descriere":"asistent bucatar",
+        "varsta":"27", "incepator":"true","dataInreg":"2019-11-22T13:37:56.920Z",
+        "specifice_culinare":"italian, german, rusesc", "telefon":"0743765389"},
+        {"id":1,"nume":"Vizitiu Dragos", "descriere":"bucatar",
+            "varsta":"40", "incepator":"false","dataInreg":"2020-06-22T13:37:56.920Z",
+            "specifice_culinare":"maghiar, austriac, sarbesc",  "telefon":"0743765389"},
+            {"id":2,"nume":"Basarabia Ion" , "descriere":"asistent bucatar",
+                "varsta":"17", "incepator":"true","dataInreg":"2019-11-24T13:37:56.920Z",
+                "specifice_culinare":"spaniol, portughez, frantuzesc",  "telefon":"0743765389"},
+                {"id":3,"nume":"Progres Vasile" , "descriere":"bucatar",
+                    "varsta":"38", "incepator":"false","dataInreg":"2020-05-10T13:37:56.920Z",
+                    "specifice_culinare":"romanesc, grecesc, turcesc" ,  "telefon":"0743765389"},
+                    {"id":4,"nume":"Duminica Andrei", "descriere":"asistent bucatar",
+                        "varsta":"15", "incepator":"true","dataInreg":"2019-12-16T13:37:56.920Z",
+                        "specifice_culinare":"chinezesc, coreean, japonez",  "telefon":"0743765389"}]}

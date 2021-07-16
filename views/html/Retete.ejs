@@ -1,0 +1,592 @@
+<!Doctype html>
+
+<html lang="ro">
+
+    <head>
+        <title>Retete</title>
+        
+       
+        <link rel='icon' href='/Imagini/favicon4.ico' type='image/x-icon'/>
+        
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width; initial-scale=1.0">
+            <meta name="Title" content="Delicatese culinare din zone diferite">
+            <meta name="Descripton" content="Retete">
+            <meta name="Keywords" content="Mancare, Delicatese, Culinar, Retete, Restaurante, Carti Culinare">
+            <meta name="Author" content="Andronie Iustinian">
+
+            <link rel="stylesheet" type="text/css" href="/CSS/Style.css"/>
+            <script src="/js/script.js"></script>
+        </head> 
+
+        <body>
+
+            <header>
+                <div class="Title" >
+                    <h1><strong style="font-size: 50px;
+                        color:rgb(9, 13, 231)" id="titlu"></strong></h1>
+    
+                </div>
+
+                <div id="log">
+                    <% if(!locals.username){  %>
+                        <form  method="post" action="/login"> 
+                                <label>
+                                    Username: <input type="text" name="username" value="">
+                                </label>
+                                    <label>
+                                    Parola: <input type="password" name="parola" value="">
+                                </label>
+                                <input type="submit" value="ok" />
+                        </form>
+                    <% } 
+                    else { %>
+                        User logat: <%= locals.username %>
+                        | <a href="/logout">Logout</a>
+                    <% } %>
+                    </div>
+
+                <nav>
+                <ul class="Menu">
+                
+                    <li><a href="index.ejs">Home</a></li>
+        
+                    <li class="SubMenu"><a href="Retete.ejs" id="Jump">Retete Celebre</a>
+                        
+                        <ul class="SubMenuLayout">
+
+                            <li class="SubSubMenu-1"><a href="#A">Felul Principal</a>
+                                <ul class="SubSubMenu-1-Layout">
+                                    <li><a href="#APCL">Aripioare de pui la cuptor lipicioase (America)</a></li>
+                                    <li><a href="#CMCS">Creveti murati cu crema de spanac (America)</a></li>
+                                    <li><a href="#APUP">Aripioare de pui cu usturoi parmezan (Europa)</a></li>
+                                    <li><a href="#PM">Platou Mediteraneean (Europa)</a></li>
+                                    <li><a href="#CPCB">Carne de porc chinezeasca pe bat</a></li>
+                                    <li><a href="#RPC">Rulouri de primavara cu creveti (Asia)</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="SubSubMenu-1"><a href="#S">Salate</a>
+                                <ul class="SubSubMenu-1-Layout">
+                                    <li><a href="#SSW">Salata Simpla Waldorf (America)</a></li>
+                                    <li><a href="#SPCC">Salata Picanta de Cartofi Cajun (America)</a></li>
+                                    <li><a href="#ST">Salata Tossed (Europa)</a></li>
+                                    <li><a href="#SG">Salata Greceasca (Europa)</a></li>
+                                    <li><a href="#STC">Salata Thai Cauli (Asia)</a></li>
+                                    <li><a href="#SVS">Salata de Vara Sashimi (Asia)</a></li>
+            
+                                </ul>
+                            </li>
+
+                            <li class="SubSubMenu-1"><a href="#D">Deserturi</a>
+                                <ul class="SubSubMenu-1-Layout">
+                                    <li><a href="#PMA">Placinta cu Mere (America)</a></li>
+                                    <li><a href="#BF">Banane Foster (America)</a></li>
+                                    <li><a href="#PCB">Prajituri la Cuptor Biscotti (Europa)</a></li>
+                                    <li><a href="#CB">Cirese Bulbanina (Europa)</a></li>
+                                    <li><a href="#BPT">Banane prajite thailandeze (Asia)</a></li>
+                                    <li><a href="#GJMSS">Gulab jamun in miere si sirop de sofran (Asia)</a></li>
+            
+                                </ul>
+                            </li>
+                        
+                        </ul>
+                    </li>
+                    <li><a href="Restaurante_Celebre.ejs">Restaurante Celebre</a></li>
+                    <li><a href="Carti_Culinare_Celebre.ejs">Carti Culinare Celebre</a></li>
+                    <li><a href="inregistrare.ejs">Inregistrare</a></li>
+                
+                </ul>
+            </nav>
+            
+            </header>
+
+            <main>
+
+                <section id="A">
+                    <h2>Preparate principale</h2>                    
+                    <section id="APCL">
+
+                        <h3>Aripioare de pui la cuptor lipicioase (America)</h3>
+                        <p><b>Total timp = 1hr 15 min</b></p>
+                        <p><b>Total numar de ingrediente = 12 </b></p>
+                        <p>Ingrediente:</p>
+                        <ul>
+                            <li>1 ceasca de ketchup;</li>
+                            <li>1 ceasca de otet de orez necondimentat;</li>
+                            <li>1/2 ceasca de sos de soia;</li>
+                            <li>2 linguri de miere;</li>
+                            <li>2 linguri de gochujang (pasta de arderi rosu coreean);</li>
+                            <li>5 kilograme de aripi de pui;</li>
+                            <li>1/4 ceasca ulei de rapita;</li>
+                            <li>Sare kosher;</li>
+                            <li>Ardei iute;</li>
+                            <li>Felii subtiri de ceapa verde;</li>
+                            <li>Seminte de susan prajite;</li>
+                            <li>Cilantro tocat.</li>
+
+                        </ul>
+                        <a href="#Jump">Mergi la inceputul paginii</a>
+
+                        
+                    </section>
+
+                    <section id="CMCS">
+
+                        <h3>Creveti murati cu crema de spanac (America)</h3>
+                        <p><b>Total timp = 30 min</b></p>
+                        <p><b>Total numar de ingrediente = 14 </b></p>
+                        <p>Ingrediente:</p>
+                        <ul>
+                            <li>3 cani de apa;</li>
+                            <li>2 cani de otet de vin alb;</li>
+                            <li>1 cana de zahar;</li>
+                            <li>4 catei de usturoi;</li>
+                            <li>2 jalapenos, felii subtiri;</li>
+                            <li>2 frunze de dafin;</li>
+                            <li>1 lingura de ardei rosu zdrobit;</li>
+                            <li>2 lingurite sare kosher;</li>
+                            <li>1 lingurita boabe de piper negru;</li>
+                            <li>1 lingurita boabe allspice;</li>
+                            <li>Creveti mari de 2 kilograme;</li>
+                            <li>1 cana de smantana;</li>
+                            <li>1 kilogram spanac;</li>
+                            <li>1 lingura suc proaspat de lamaie</li>
+
+
+                        </ul>
+                        <a href="#Jump">Mergi la inceputul paginii</a>
+
+                        
+                    </section>
+
+                    <section id="APUP">
+
+                        <h3>Aripioare de pui cu usturoi parmezan (Europa)</h3>
+                        <p><b>Total timp = 37 min</b></p>
+                        <p><b>Total numar de ingrediente = 12 </b></p>
+                        <p>Ingrediente:</p>
+                        <ul>
+                            <li>1 kilogram aripioare de pui;</li>
+                            <li>spray de gatit;</li>
+                            <li>4 linguri de unt;</li>
+                            <li>6 catei de usturoi;</li>
+                            <li>1/4 lingura de oregano uscat;</li>
+                            <li>1/4 lingura de marjoram;</li>
+                            <li>1/2 cana de smantana;</li>
+                            <li>1/2 cana de stock de pui;</li>
+                            <li>1/2 cana de branza parmigiano reggiano;</li>
+                            <li>1 lingura de usturoi pudra;</li>
+                            <li>sare;</li>
+                            <li>piper.</li>
+                          
+                        </ul>
+                        <a href="#Jump">Mergi la inceputul paginii</a>
+
+                        
+                    </section>
+
+                                                          
+                    <section id="PM">
+
+                        <h3>Platou Mediteraneean (Europa)</h3>
+                        <p><b>Total timp = 20 min</b></p>
+                        <p><b>Total numar de ingrediente = 17 </b></p>
+                        <p>Ingrediente:</p>
+                        <ul>
+                            <li>2 vinete mici;</li>
+                            <li>Sare;</li>
+                            <li>Ulei de masline;</li>
+                            <li>350 grame de Sabra Classic Hummus;</li>
+                            <li>350 grame Sabra Ardei Rosu Prajit Hummus;</li>
+                            <li>1/2 ardei gras;</li>
+                            <li>350 grame de iaurt grecesc;</li>
+                            <li>6 rosii;</li>
+                            <li>6 castraveti;</li>
+                            <li>Masline Kalamata;</li>
+                            <li>525 grame de inimi de anghinare marinate;</li>
+                            <li>210 grame de branza feta greceasca;</li>
+                            <li>210 grame de branza mozzarella;</li>
+                            <li>105 grame de prosiutoo;</li>
+                            <li>6 smochine;</li>
+                            <li>1 lingurita de sumac;</li>
+                            <li>paine.</li>
+
+
+                          
+                        </ul>
+                        <a href="#Jump">Mergi la inceputul paginii</a>
+
+                        
+                    </section>
+
+                    <section id="CPCB">
+
+                        <h3>Carne de porc chinezeasca pe bat</h3>
+                        <p><b>Total timp = 37 min</b></p>
+                        <p><b>Total numar de ingrediente = 13 </b></p>
+                        <p>Ingrediente:</p>
+                        <ul>
+                            <li>280 grame varza napa/bok choy;</li>
+                            <li>3 linguri de sare;</li>
+                            <li>1 kg de carne de porc macinat;</li>
+                            <li>1/4 cani de ceapa verde tocata marunt;</li>
+                            <li>1 lingura de vin alb;</li>
+                            <li>1 lingura de amidon de porumb;</li>
+                            <li>1 lingura de ulei de susan;</li>
+                            <li>ardei alb;</li>
+                            <li>2 cani de faina;</li>
+                            <li>1 cana de apa clocotita;</li>
+                            <li>2 linguri de ulei vegetal;</li>
+                            <li>1/4 cani de sos soia;</li>
+                            <li>1 lingura de ulei de susan;</li>
+                            
+                          
+                        </ul>
+                        <a href="#Jump">Mergi la inceputul paginii</a>
+
+                    </section>
+
+                    <section id="RPC">
+
+                        <h3>Rulouri de primavara cu creveti</h3>
+                        
+                        <p><b>Total timp = 45 min</b></p>
+
+                        <p><b>Total numar de ingrediente = 13 </b></p>
+                        
+                        <p>Ingrediente:</p>
+                        
+                        <ul>
+                            <li>2 linguri de soia;</li>
+                            <li>2 linguri de sos de peste;</li>
+                            <li>2 linguri de suc de lamaie;</li>
+                            <li>1/4 lingurite de zahar;</li>
+                            <li>2 linguri de ulei;</li>
+                            <li>3 catei de usturoi;</li>
+                            <li>1 bucata de galangal;</li>
+                            <li>2 cepe verzi;</li>
+                            <li>1 chilli rosu;</li>
+                            <li>1/2 cană varză (mărunțită sau tocată fin);</li>
+                            <li>4 - 6 ciuperci shiitake (taiate in chibrituri);</li>
+                            <li>1/2 cană de tofu;</li>
+                            <li>2 cani de fasole;</li>
+                            <li>1/2 cana cilantro;</li>
+                            <li>1/2 cană busuioc.</li>
+                            
+                          
+                        </ul>
+                        <a href="#Jump">Mergi la inceputul paginii</a>
+
+                    </section>
+
+                </section>
+
+                <section id="S">
+                 <h2>Salate</h2>                    
+
+                    <section id="SSW">
+
+                        <h3>Salata Simpla Waldorf (America)</h3>
+
+                        <p><b>Timp maxim de preparare: 10 minute</b></p>
+                        <p><b>Numar de ingrediente: 6</b></p>
+
+                        <p>Ingrediente:</p>
+                        <ul>
+                            <li>2 mere mari de Gala tocate;</li>
+                            <li>2 cani de telina tocata;</li>
+                            <li>1/4 cani de stafide;</li>
+                            <li>1/4 nuci de California prajite;</li>
+                            <li>1/3 cani de maioneza (grasime redusa);</li>
+                            <li>1/3 cana de iaurt.</li>
+                         
+                        </ul>
+                        <a href="#Jump">Mergi la inceputul paginii</a>
+                    </section>
+
+                    <section id="SPCC">
+                        <h3>Salata Picanta de Cartofi Cajun</h3>
+                        <p><b>Timp maxim de preparare: 30 minute</b></p>
+                        <p><b>Numar de ingrediente: 16</b></p>
+
+                        <p>Ingrediente:</p>
+                        <ul>
+                            <li>5 kilograme de cartofi Yukon;</li>
+                            <li>1 ceapa;</li>
+                            <li>1/2 lamaie medie;</li>
+                            <li>8 oua mari fierte;</li>
+                            <li>2 cani de maioneza cu ulei de masline si piper macinat;</li>
+                            <li>1 cana de marar;</li>
+                            <li>1/4 cana de mustar;</li>
+                            <li>2 linguri de condimente de Cajun;</li>
+                            <li>1/4 cana de patrunjel tocat;</li>
+                            <li>Paprika.</li>
+                        </ul>
+                        <a href="#Jump">Mergi la inceputul paginii</a>
+                    </section>
+
+                    <section id="ST">
+                        <h3>Salata Tossed (Europa)</h3>
+                        <p><b>Timp maxim de preparare: 10 minute</b></p>
+                        <p><b>Numar de ingrediente: 5</b></p>
+
+                        <p>Ingrediente:</p>
+                        <ul>
+                            <li>350 grame de verdeata;</li>
+                            <li>1/2 cana de rosii;</li>
+                            <li>1/2 cana Mayo;</li>
+                            <li>2 linguri de zahar;</li>
+                            <li>2 linguri de lamaie;</li>
+                            
+                        </ul>
+                        <a href="#Jump">Mergi la inceputul paginii</a>
+                    </section>
+
+                    <section id="SG">
+                        <h3>Salata Greceasca (Europa)</h3>
+                        <p><b>Timp maxim de preparare: 40 minute</b></p>
+                        <p><b>Numar de ingrediente: 11</b></p>
+
+                        <p>Ingrediente:</p>
+                        <ul>
+                            <li>1 cana de rosii;</li>
+                            <li>1 castravete;</li>
+                            <li>1/2 ardei gras;</li>
+                            <li>1/2 ardei gras galben;</li>
+                            <li>1/2 piper portocaliu;</li>
+                            <li>1 cana de masline Kalamata;</li>
+                            <li>1/4 cana ceapa rosie;</li>
+                            <li>1/2 cana de branza feta;</li>
+                            <li>1/2 cana de masline;</li>
+                            <li>3 grame de zahar;</li>
+                            <li>1 lingurita de oregano uscat.</li>
+                            
+                        </ul>
+                        <a href="#Jump">Mergi la inceputul paginii</a>
+                    </section>
+
+                    <section id="STC">
+                        <h3>Salata Thai Cauli (Asia)</h3>
+                        <p><b>Timp maxim de preparare: 20 minute</b></p>
+                        <p><b>Numar de ingrediente: 10</b></p>
+
+                        <p>Ingrediente:</p>
+                        <ul>
+                            <li>1 conopida;</li>
+                            <li>1 lingura de ulei de alune;</li>
+                            <li>4 frunze de lamaie;</li>
+                            <li>1 catel de usturoi;</li>
+                            <li>1 chilli rosu;</li>
+                            <li>1 lingura de zahar brun;</li>
+                            <li>3 lamai;</li>
+                            <li>1 lingura de ulei de peste;</li>
+                            <li>1 ceapa rosie;</li>
+                            <li>1 buchet de coriandru tocat;</li>
+                            <li>1 lingurita de oregano uscat.</li>
+                            
+                        </ul>
+                        <a href="#Jump">Mergi la inceputul paginii</a>
+                    </section>
+
+                    <section id="SVS">
+                        <h3>Salata de Varza Sashimi (Asia)</h3>
+                        <p><b>Timp maxim de preparare: 20 minute</b></p>
+                        <p><b>Numar de ingrediente: 10</b></p>
+
+                        <p>Ingrediente:</p>
+                        <ul>
+                            <li>1 avocado copt;</li>
+                            <li>1/4 castravete;</li>
+                            <li>1/2 ceapa rosie;</li>
+                            <li>100 grame de pepene;</li>
+                            <li>1 sflecla;</li>
+                            <li>1 lingura de ghimbir murat;</li>
+                            <li>150 de grame de file de somon;</li>
+                            <li>1/3 lingura de susan;</li>
+                            <li>2 linguri de otet de orez;</li>
+                            <li>1 lingura de sos de soia;</li>
+                            <li>1 lingura de ulei de susan;</li>
+                            <li>1 lingura de zahar.</li>
+                            
+                        </ul>
+                        <a href="#Jump">Mergi la inceputul paginii</a>
+                    </section>
+                </section>
+                
+                    <section id="D">
+                        <h2>Deserturi</h2>
+                        <section id="PMA">
+
+                            <h3>Placinta cu Mere (America)</h3>
+                            
+                            <p><b>Timp maxim de preparare: 50 minute</b></p>
+
+                            <p><b>Numar de ingrediente: 6</b></p>
+    
+                            <p>Ingrediente:</p>
+
+                            <ul>
+                                <li>2 cani de faina;</li>
+                                <li>2 linguri de zahar granulat;</li>
+                                <li>2 linguri de praf de copt;</li>
+                                <li>1/2 linguri de sare;</li>
+                                <li>1/4 cani de unt;</li>
+                                <li>1/3 cana de iaurt;</li>
+                                <li>1 ou;</li>
+                                <li>3 cani de mere taiate;</li>
+                                <li>2 linguri de apa;</li>
+                                <li>1/4 cana de zahar granulat;</li>
+                                <li>1 lingura de unt;</li>
+                                <li>1/4 linguri de scortisoara;</li>
+                                <li>3 cani de ulei vegetal;</li>
+                                <li>Zahar pudra.</li>
+                             
+                            </ul>
+
+                            <a href="#Jump">Mergi la inceputul paginii</a>
+                        </section>
+
+                        <section id="BF">
+
+                            <h3>Banane Foster (America)</h3>
+                            
+                            <p><b>Timp maxim de preparare: 15 minute</b></p>
+
+                            <p><b>Numar de ingrediente: 6</b></p>
+    
+                            <p>Ingrediente:</p>
+
+                            <ul>
+                                <li>1 banană (coaptă, dar fermă);</li>
+                                <li>2 linguri zahăr brun;</li>
+                                <li>1 lingura de unt;</li>
+                                <li>1/4 linguriță scorțișoară măcinată;</li>
+                                <li>Lichior de banane 1/2 uncie;</li>
+                                <li>1/2 uncie de rom;</li>
+                                <li>1 lingura inghetata de vanilie;</li>
+                                
+                            </ul>
+
+                            <a href="#Jump">Mergi la inceputul paginii</a>
+                        </section>
+
+                        <section id="PCB">
+
+                            <h3>Prajituri la Cuptor Biscotti (Europa)</h3>
+                            
+                            <p><b>Timp maxim de preparare: 75 minute</b></p>
+
+                            <p><b>Numar de ingrediente: 6</b></p>
+    
+                            <p>Ingrediente:</p>
+
+                            <ul>
+                                <li>320 grame de unt;</li>
+                                <li>1 cană zahăr;</li>
+                                <li>3 ouă mari;</li>
+                                <li>2 lingurițe extract de vanilie;</li>
+                                <li>3 cani faina cu toate scopurile;</li>
+                                <li>1 lingură praf de copt;</li>
+                                <li>1/2 lingurita sare;</li>
+                                <li>1 cană de migdale răsucite</li>
+                                <li>1 cană chipsuri de ciocolată semisweet</li>
+                                <li>1 cană chipsuri de ciocolată albă</li>
+                                
+                            </ul>
+
+                            <a href="#Jump">Mergi la inceputul paginii</a>
+                        </section>
+
+                        <section id="CB">
+
+                            <h3>Cirese Bulbanina (Europa)</h3>
+                            
+                            <p><b>Timp maxim de preparare: 60 minute</b></p>
+
+                            <p><b>Numar de ingrediente: 6</b></p>
+    
+                            <p>Ingrediente:</p>
+
+                            <ul>
+                                <li>1/2 cana de unt;</li>
+                                <li>1/2 cana zahar;</li>
+                                <li>3 oua;</li>
+                                <li>1/2 linguri de sare;</li>
+                                <li>1 cană făină;</li>
+                                <li>1/3 cana de iaurt;</li>
+                                <li>1 cană făină cu toate scopurile;</li>
+                                
+                            </ul>
+
+                            <a href="#Jump">Mergi la inceputul paginii</a>
+                        </section>
+
+                        <section id="BPT">
+
+                            <h3>Banane prajite thailandeze (Asia)</h3>
+                            
+                            <p><b>Timp maxim de preparare: 22 minute</b></p>
+
+                            <p><b>Numar de ingrediente: 9</b></p>
+    
+                            <p>Ingrediente:</p>
+
+                            <ul>
+                                <li>3/4 cani de ulei;</li>
+                                <li>2 banane;</li>
+                                <li>1/4 cană făină;</li>
+                                <li>1/2 cană făină de orez;</li>
+                                <li>1/4 cană amidon de porumb;</li>
+                                <li>1/4 lingurita sare;</li>
+                                <li>1/3 cană apă rece;</li>
+                                <li>1/3 linguriță de copt sodă;</li>
+                                <li>1 ou mare.</li>
+                                
+                            </ul>
+
+                            <a href="#Jump">Mergi la inceputul paginii</a>
+                        </section>
+
+                        <section id="GJMSS">
+
+                            <h3>Gulab jamun in miere si sirop de sofran (Asia)</h3>
+                            
+                            <p><b>Timp maxim de preparare: 50 minute</b></p>
+
+                            <p><b>Numar de ingrediente: 6</b></p>
+    
+                            <p>Ingrediente:</p>
+
+                            <ul>
+                                <li>2 cani de faina;</li>
+                                <li>2 linguri de zahar granulat;</li>
+                                <li>2 linguri de praf de copt;</li>
+                                <li>1/2 linguri de sare;</li>
+                                <li>1/4 cani de unt;</li>
+                                <li>1/3 cana de iaurt;</li>
+                                <li>1 ou;</li>
+                                <li>3 cani de mere taiate;</li>
+                                <li>2 linguri de apa;</li>
+                                <li>1/4 cana de zahar granulat;</li>
+                                <li>1 lingura de unt;</li>
+                                <li>1/4 linguri de scortisoara;</li>
+                                <li>3 cani de ulei vegetal;</li>
+                                <li>Zahar pudra.</li>
+                             
+                            </ul>
+
+                        </section>
+
+                </section>
+
+            </main>
+            <%- include('../fragmente/footer') %>
+
+        </body>
+        
+       
+        
+    
+
+</html>

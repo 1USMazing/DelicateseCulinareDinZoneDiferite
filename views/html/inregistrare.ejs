@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<title>Inregistrare utilizator</title>
+
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <meta name="Description" content="Acest site prezinta diferite delicatese culinare din fiecare continent.">
+    <meta name="Keywords" content="Mancare, Delicatese, Culinar, Retete, Restaurante, Carti Culinare">
+    <meta name="Author" content="Andronie Iustinian">
+	<link type="text/css" rel="stylesheet" href="/CSS/Style.css"/>
+	<link rel='icon' href='/Imagini/favicon4.ico' type='image/x-icon'/>
+	<script src="/js/script.js"></script>
+</head>
+
+<body class="container">
+
+    <header>
+
+        <div class="Title" >
+            <h1><strong style="font-size: 50px;
+				color:rgb(9, 13, 231)" id="titlu"></strong></h1>
+
+        </div>
+
+		<div id="log">
+		<% if(!locals.username){  %>
+			<form  method="post" action="/login"> 
+					<label>
+						Username: <input type="text" name="username" value="">
+					</label>
+						<label>
+						Parola: <input type="password" name="parola" value="">
+					</label>
+					<input type="submit" value="ok" />
+			</form>
+		<% } 
+		else { %>
+			User logat: <%= locals.username %>
+			| <a href="/logout">Logout</a>
+		<% } %>
+		</div>
+		
+        <nav>
+        <ul class="Menu">
+            
+            <li><a href="index.ejs">Home</a></li>
+            <li><a href="Retete.ejs" id="Jump">Retete Celebre</a></li>
+            <li><a href="Restaurante_Celebre.ejs">Restaurante Celebre</a></li>
+            <li><a href="Carti_Culinare_Celebre.ejs">Carti Culinare Celebre</a></li>
+            <li class="SubMenu0"><a href="inregistrare.ejs">Inregistrare</a></li>
+            
+		</ul>
+        </nav>
+    </header>
+
+<main>
+    <div class="afisaj">
+        <h1>Inregistrare utilizator</h1>
+        <p>Completati formularul pentru noul bucatar:<br/>
+		</p>
+		<% if(!locals.rsstatus) { %><!-- verific daca status e definit-->
+		<form method="post" action="/inreg" class="date"> <!-- daca nu pun action atunci actionul default este pagina curenta -->
+			<p>
+			<label>
+				Username: <input type="text" name="username" value="user123">
+			</label>
+			</p>
+			<p>
+			<label>
+				Nume: <input type="text" name="nume" value="Foaie Verde">
+			</label>
+			</p>
+			<p>
+			<label>
+				Specifice culinare(separate cu virgula): <input type="text" name="specifice culinare" value="italian, mexican" size="50">
+			</label>
+			</p>
+			<p>
+			<label for="i_range">
+				Timp pentru preparare in minute: <input type="number" min="10" max="90" step="5" name="Timp pentru preparare">
+			</label>
+			</p>
+			<p>
+			<label>
+				Parola: <input type="password" name="parola" value="">
+			</label>
+			</p>
+			<p>
+			<label>
+				Reintroduceti parola: <input type="password" name="rparola" value="">
+			</label>
+			</p>
+			<p>
+			<label>
+				Email: <input type="text" name="email" value="ejs_node@gmail.com"  size="50">
+			</label>
+			</p>
+			<p>		
+			<input type="submit" value="Submit">
+			</p>
+		</form>
+		<% } else if(rsstatus=="ok"){ %>
+			<p>Date introduse</p>
+		<% } else {%>
+			<p>Eroare</p>
+		<% } %>
+    </div>
+</main>
+
+<%- include('../fragmente/footer') %>
+
+
+</body>
+</html>

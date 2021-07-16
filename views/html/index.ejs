@@ -1,0 +1,248 @@
+<!Doctype html>
+
+<html lang="ro">
+    <head>
+        <title>Delicatese culinare din zone diferite</title>
+        
+       
+        <link rel='icon' href='/Imagini/favicon4.ico' type='image/x-icon'/>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <meta name="Description" content="Acest site prezinta diferite delicatese culinare din fiecare continent.">
+        <meta name="Keywords" content="Mancare, Delicatese, Culinar, Retete, Restaurante, Carti Culinare">
+        <meta name="Author" content="Andronie Iustinian">
+                
+        <link rel="stylesheet" type="text/css" href="/CSS/Style.css"/>
+        <script src="/js/ejs.min.js"></script>
+        <script src="/js/script.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="Title" >
+                <h1><strong style="font-size: 50px;
+                                    color:rgb(9, 13, 231)" id="titlu"></strong></h1>
+
+            </div>
+
+            <div id="log">
+                <% if(!locals.username){  %>
+                    <form  method="post" action="/login"> 
+                            <label>
+                                Username: <input type="text" name="username" value="">
+                            </label>
+                                <label>
+                                Parola: <input type="password" name="parola" value="">
+                            </label>
+                            <input type="submit" value="ok" />
+                    </form>
+                <% } 
+                else { %>
+                    User logat: <%= locals.username %>
+                    | <a href="/logout">Logout</a>
+                <% } %>
+            </div>
+
+        <ul class="Menu">
+		
+		<li class="SubMenu"><a href="index.ejs">Home</a>
+
+			<ul class="SubMenuLayout">
+
+				<li><a href="#BCA">Bucătăria Continentului American</a></li>
+
+				<li class="SubSubMenu-1"><a href="#BCE">Bucătăria Europei</a>
+
+					<ul class="SubSubMenu-1-Layout">
+					   <li><a href="#BEV">Bucataria Europei de Vest</a></li>
+
+					   <li><a href="#BEE">Bucataria Europei de Est</a></li>
+					</ul>
+				</li>
+
+				<li class="SubSubMenu-2"><a href="#BA">Bucataria Asiei</a>                          
+					<ul class="SubSubMenu-2-Layout">
+						<li><a href="#BOM">Bucătăria Orientului Mijlociu</a></li>
+
+						<li><a href="#BAE">Bucătăria Asiei de Est</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="Retete.ejs" id="Jump">Retete Celebre</a></li>
+		<li><a href="Restaurante_Celebre.ejs">Restaurante Celebre</a></li>
+		<li><a href="Carti_Culinare_Celebre.ejs">Carti Culinare Celebre</a></li>
+		<li><a href="inregistrare.ejs">Inregistrare</a></li>
+		
+        </ul>
+        </header>
+
+        <main>
+
+            <h1>JSON</h1>
+                <p>Continut JSON</p>
+		            <!-- aici se va afisa continutul neprocesat al JSON-ului -->
+		        <div class="afis" id="afisJson">
+                </div>
+		
+                <p>Bucatari inregistrati:</p>
+		
+		        <!-- aici se va afisa continutul JSON-ului cu formatul din template-ul definit in script -->
+		        <div class="afis" id="afisTemplate">
+                </div>
+
+            <div id="container_butoane">
+            <button id="RESET">RESET</button>
+            <button id="alpha_sort">Sortare dupa Nume</button>
+            <button id="age_sort">Sortare dupa varsta</button>
+            <button id="18+">Pastrati majorii</button>
+            <button id="incepatori">Pastrati incepatorii</button>
+            <button id="avansati">Pastrati avansatii</button>
+            <button id="preferinte">Pastrati preferintele</button>
+            <button id="medium_age">Varsta Medie</button>
+            <button id="stop">Opreste efectul chenarului</button>
+            </div>
+
+            <p id="demo"></p>
+            Doar inregistrarile din 2020: <input type="checkbox" id="myCheck">
+
+            <form>
+               Ce specific preferati?<br>
+               <input type="radio" name="dishes" id="ita-ger-ru">Italian, German, Rusesc<br>
+               <input type="radio" name="dishes" id="mag-aus-sar">Maghiar, Austriac, Sarbesc<br>
+               <input type="radio" name="dishes" id="spa-por-fra">Spaniol, Portughez, Frantuzesc<br>
+               <input type="radio" name="dishes" id="rom-gre-tur">Romanesc, Grecesc, Turcesc<br>
+               <input type="radio" name="dishes" id="chi-cor-jap">Chinezesc, Coreean, Japonez<br>
+            </form>
+
+            Data nasterii: <input type="text" id="varsta" value="zi#luna#an"> 
+            <button id="calc_varsta">Calculeaza varsta</button>
+
+            <section id="container_info">
+                
+                <h2>Rezultate:</h2>
+                <div id="info"></div>
+
+            </section>
+
+            <section id="BCA">
+            <h2>Bucătăria Continentului American</h2>
+            
+            <p>Bucătăria continentului American se imparte in doua zone importante:
+                <ul>
+                    <li>Bucătăria Americii de Nord;</li>
+                    <li>Bucătăria Americii Latine.</li>
+                </ul>
+            
+            <p><b>Bucătăria Americii de Nord</b> se bazeaza in general pe fuziunea retetelor culinare din fiecare continent, mai cu seama a celor din Europa si Africa. In acest fel, bucataria americana reprezinta bucataria globala. Cu toate acestea, se gasesc destule preparate regionale traditionale precum: Cajun, Corndogs, Supa de scoici, Jambalaya etc.</p>
+            <aside>
+            <p>Ingredientele care nu ii lipsesc americanului de rand din casa sunt:</p>
+            
+            <ul>
+                <li><i lang="it">Mozzarella</i>/Cheddar (folosite des pentru pizza, hamburgeri etc);</li>
+                <li>Rosii (ingredientul cel mai des folosit pentru sosuri);</li>
+                <li>Cartofi (serviti adesea cu sos de rosii);</li>
+                <li>Carne de pui (preparata in pesmet);</li>
+                <li>Portocalele si Merele (folosite pentru placinte, prajituri);</li>
+                <li>Unt de arahide (servit la micul-dejun) etc</li>
+            </ul>
+            </aside>
+            <p><b>Bucataria Mexicana</b> trebuie amintita in aceasta sectiune, deoarece aceasta a inceput in urma cu mii de ani si a ajuns una dintre cele mai admirate in ziua de azi.Bucataria Mexicana din zilele noastre reprezinta un amestec de preparate ale civilizatiilor mayase si azteci impreuna cu cea spaniola.</p>
+          
+
+            <p>Cele mai cunoscute preparate mexicane sunt: </p>
+            <ul>
+                <li>Tortilla (servita pe post de paine si preparata din faina sau porumb)</li>
+                <li><i lang="es">Frijoles</i>(fasole fiarta si prajita folosita ca si garnitura)</li>
+                <li><i lang="es">Burrito</i></li>
+                <li><i lang="es">Empanadas</i></li>
+                <li><i lang="es">Quesadillas</i></li>
+                <li><i lang="es">Tacos</i> etc</li>
+            </ul>
+            </section>
+
+            <section id="BCE">
+
+            <h2>Bucataria Continentului European</h2>
+
+            <article>
+            <h3>Scurt istoric</h3>
+            <p>Bucataria Europei are o istorie indelungata, influentand multe alte zone. Folosind ca ingredient general carnea, servita fie impreuna cu un sos, fie impreuna cu legume si ca bautura ce acompaniaza felul principal, vinul, bucataria europeana a avut parte de o evolutie fara precedent. In Europa exista sute de varietati de branzeturi si alte produse din lapte. Painea din faina de grau a fost multa vreme cea mai comuna sursa de amidorn, impreuna cu paste, galuste si produse de patiserie. Porumbul nu este atat de folosit in dieta europeana ca in cea americana, in schimb faina de porumb (mamaliga) are un rol major in bucataria italiana si balcanica. Salatele (ce contin legume crude sau fierte cu sos) fac parte integranta din bucataria europeana. </p> 
+            </article>
+
+            <h3 id="BEV">Bucataria Europei de Vest</h3>
+            <p>Bucatariile din tarile occidentale sunt diverse, desi exista caracteristici comune care le deosebesc de cele ale altor regiuni. In comparatie cu gatitul traditional din Asia de Est, carnea este mai proeminenta si substantiala in dimensiunea servirii.</p>
+            <p>Cele mai cunoscute mancaruri din Europa de Vest sunt:</p>
+            <ul>
+                <li>Pizza (Italia);</li>
+                <li><i lang="it">Spaghetti</i> (Italia);</li>
+                <li> <i lang="de">Schnitzel</i> (Austria);</li>
+                <li>Croissant (Austria);</li>
+                <li><i lang="it">Carpaccio</i> (Italia);</li>
+                <li>Cartofii prajiti (Belgia);</li>
+                <li>Cartofii cu peste (Marea Britanie);</li>
+                <li><i lang="fr">Crepe</i> (Franta);</li>
+                <li><i lang="es">Tapas</i> (Spania);</li>
+                <li><i lang="hu">Gulyas</i> (Ungaria);</li>
+            </ul>
+            
+            <h3 id="BEE">Bucataria Europei de Est</h3> 
+            
+            <aside><p>Conform "Ethnic Food Lover's Companion", toate bucatariile semnificative din Europa de Est sunt strans legate de renasterea politica, sociala si economica a regiunii in urma perioadelor lungi de agitatie istorica.</p> 
+            </aside>
+
+            <p>Cele mai cunoscute mancaruri din Europa de Est sunt:</p>
+            <ul>
+                
+                <li>Iaurtul (Bulgaria);</li>
+                <li><i lang="bg">Banitza</i> (Bulgaria);</li>
+                <li><i lang="pl">Kielbasa</i> (Polonia);</li>
+                <li><i lang="tr">Doner kebab</i> (Turcia);</li>
+                <li>Salata greceasca;</li>
+                <li>Sarmalutele cu mamaliga (Romania);</li>
+                <li><i lang="uk">Borscht</i> (Ucraina);</li>
+                <li><i lang="hy">khorovats</i> (Armenia);</li>
+                <li><i lang="az">plov</i> (Azerbaijan);</li>
+                <li><i lang="tt">chiburekki</i> (Crimea);</li>
+            </ul>    
+        </section>
+
+            <section id="BA">
+            <h2>Bucataria Asiei</h2>
+            <p>Bucataria asiatica include mai multe bucatarii regionale majore: Asia Centrala, Asia de Est, Asia de Nord, Asia de Sud, Asia de Sud-Est si Asia de Vest. Asia fiind cel mai mare si mai populat continent, gazduieste multe culturi, multe dintre ele avand propria lor bucatarie caracteristica.</p>
+            <h3 id="BOM">Bucataria Orientului Mijlociu</h3>
+            <p>Gastronomia acestei regiuni contine diferite tipuri de ierburi si condimente.</p>
+            <p>Urmatoarele preparate caracterizeaza cel mai bine Orientul Mijlociu:</p>
+
+            <ul>
+                <li>Hummus (tahini, ulei de masline, usturoi si suc de lamaie cu sos de naut)</li>
+                <li>Tahini</li>
+                <li>Falafel (bile prajite formata din naut, ceapa si mirodenii)</li>
+                <li>Tabouleh (salata cu grau, menta, patrunjel si legume)</li>
+                <li>Baklava</li>
+                <li>Cafea turceasca etc</li>
+
+            </ul>
+            </section>
+
+        <section id="BAE">
+            <h3>Bucataria Asiei de Est</h3>
+            <p>Bucataria Asiei de Est include bucatariile din tari precum: China, Japonia, Coreea, Mongolia, Malaezia. Fiind cea mai populata zona de pe Glob detine o gama larga de preparate.</p>
+            <p>Cele mai populare preparate sunt:</p>
+            <ul>
+                <li>Crab Chilli (Singapore)</li>
+                <li>Banh Xeo-Carne de porc crocanta si clatite de creveti (Vietnam)</li>
+                <li>Ramen-Bol cu taitei de grau servit in sos de soia (Japonia)</li>
+                <li>Yakitori-frigarui cu legume si carne gatite pe gratar si inmuiate in sos teriyaki(China)</li>
+                <li>Galuste (China)</li>
+                <li>Porc dulce acrisor (China)</li>
+                <li>Kimchi-mancare picanta si acra din legume fermentate (Coreea)</li>
+                <li>Nasi kerabu-orez albastru cu pui prajit, ou si keropok prajit (Malaezia)</li>
+            </ul>  
+        </section>
+        </main>
+        <%- include('../fragmente/footer') %>
+
+    </body>
+</html>

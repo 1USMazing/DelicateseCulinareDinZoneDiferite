@@ -45,14 +45,12 @@ a
     display: flex;
     margin-top: 20px;
     margin: 0;
-    
 }
 
 .Menu>li
 {
     flex: 1;
     text-align: center;
-    
 }
 
 .Menu>li>a
@@ -115,7 +113,6 @@ a
 .SubMenuLayout>li
 {
     margin-top: 1px;
-    
 }
 
 .SubSubMenu-1, .SubSubMenu-2
@@ -318,4 +315,109 @@ a[href="#Jump"]
 {
     color:red;
     font-weight: bold;
+}
+
+#log
+{
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+a[href^="/log"]
+{
+    text-decoration: underline;
+    color: blue;
+}
+
+.afis{
+	border:2px solid skyblue;
+	padding:0.7em;
+}
+
+.templ_bucatar{
+	border:1px solid grey;
+	padding:0.4em;
+}
+
+#container_butoane{
+	border:1px solid rgb(66, 93, 245);
+	background:linear-gradient(to right, rgba(0,79,240,0.75), rgba(97,240,0,0.75));
+	display:flex;
+	padding:0.5em;
+	flex-wrap:wrap;
+	border-radius: 0.5em;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	justify-content:center;
+	
+}
+#container_butoane button{
+	width:200px;
+	margin:0.5em;
+    background: linear-gradient(to bottom, #ff8800, #000);
+    color:white;
+	border:2px solid grey;
+	padding:0.3em;
+	border-radius: 0.4em;
+	min-height:3em;
+    transition:all 0.4s linear;
+
+}
+
+#container_butoane button:hover, #calc_varsta:hover{
+	background: linear-gradient(to top, #ff8800, #000);
+	box-shadow: rgb(43, 5, 255);
+}
+
+#calc_varsta{
+    width:200px;
+    height:35px;
+	margin:0.5em;
+    background: linear-gradient(to bottom, #ff8800, #000);
+    color:white;
+	border:2px solid grey;
+	padding:0.3em;
+	border-radius: 0.4em;
+    transition:all 0.4s linear;
+}
+
+#container_butoane #stop
+{
+    width:200px;
+	margin:0.5em;
+    background: linear-gradient(to bottom, red, #000);
+    color:white;
+	border:2px solid grey;
+	padding:0.3em;
+	border-radius: 0.4em;
+	min-height:3em;
+    transition:all 0.4s linear;
+}
+
+#container_butoane #stop:hover
+{
+    background: linear-gradient(to top, red, #000);
+	box-shadow: rgb(43, 5, 255);
+}
+
+.selectat
+{
+    background:#6fe679; 
+}
+
+#container_info h2{
+	font-size:1.3em;
+}
+#container_info{
+	margin:0 auto;				
+	width:50%;
+}
+
+#info{
+	overflow-y:scroll;
+	height:100%;
+	height:300px;
+	width:100%;
+	border:1px solid black;
+	
 }

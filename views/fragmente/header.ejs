@@ -1,0 +1,60 @@
+<header>
+
+	<div class="Title" >
+		<h1><strong style="font-size: 50px;
+							color:rgb(9, 13, 231)">Delicatese Culinare din Zone diferite</strong></h1>
+
+	</div>
+
+	<nav>
+	<ul class="Menu">
+		
+		<li class="SubMenu"><a href="index.ejs">Home</a>
+
+			<ul class="SubMenuLayout">
+
+				<li><a href="#BCA">Bucătăria Continentului American</a></li>
+
+				<li class="SubSubMenu-1"><a href="#BCE">Bucătăria Europei</a>
+
+					<ul class="SubSubMenu-1-Layout">
+					   <li><a href="#BEV">Bucataria Europei de Vest</a></li>
+
+					   <li><a href="#BEE">Bucataria Europei de Est</a></li>
+					</ul>
+				</li>
+
+				<li class="SubSubMenu-2"><a href="#BA">Bucataria Asiei</a>                          
+					<ul class="SubSubMenu-2-Layout">
+						<li><a href="#BOM">Bucătăria Orientului Mijlociu</a></li>
+
+						<li><a href="#BAE">Bucătăria Asiei de Est</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="Retete.ejs" id="Jump">Retete Celebre</a></li>
+		<li><a href="Restaurante_Celebre.ejs">Restaurante Celebre</a></li>
+		<li><a href="Carti_Culinare_Celebre.ejs">Carti Culinare Celebre</a></li>
+		<li><a href="inregistrare.ejs">Inregistrare</a></li>
+		
+	</ul>
+	<div id="log">
+		<% if(!locals.username){  %>
+			<form  method="post" action="/login"> 
+					<label>
+						Username: <input type="text" name="username" value="">
+					</label>
+						<label>
+						Parola: <input type="password" name="parola" value="">
+					</label>
+					<input type="submit" value="ok" />
+			</form>
+		<% } 
+		else { %>
+			User logat: <%= locals.username %>
+			| <a href="/logout">Logout</a>
+		<% } %>
+		</div>
+	</nav>
+</header>
